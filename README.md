@@ -1,8 +1,29 @@
-# React + Vite
+# 초성 퀴즈 챌린지
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+초성 퀴즈 챌린지는 한국어 초성(자음)만을 보고 해당 단어(예: 치킨, 햄버거, 라면, 아이스크림 등)의 정답을 맞추는 재미있는 모바일 웹 게임입니다.  
+레트로 8비트 픽셀 아트 스타일의 UI와 특이한 메뉴명 변형을 통해 사용자에게 도전과 몰입감을 제공합니다.
 
-Currently, two official plugins are available:
+## 주요 기능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **다양한 카테고리**: 치킨, 햄버거, 라면, 아이스크림 등 4개의 카테고리별로 10문제씩 구성되어 있습니다.
+- **도전적인 초성 퀴즈**: 각 문제는 초성으로 제시되며, 정답과 매우 유사한 헷갈리는 옵션들로 구성되어 있습니다.
+- **레트로 스타일 UI**: 8비트 픽셀 아트 레트로 디자인과 맞춤형 폰트(예: DungGeunMo, Press Start 2P, Nanum Gothic)를 사용하여 레트로 게임의 느낌을 재현합니다.
+- **모바일 우선 반응형 디자인**: 모바일 기기에서 최적화된 UI/UX를 제공합니다.
+- **결과 모달**: 퀴즈 종료 후, 결과 화면이 모달로 나타나 점수와 함께 홈으로 돌아갈 수 있습니다.
+
+## 기술 스택
+
+- **React** (함수형 컴포넌트, Hooks)
+- **Vite** (빠른 번들링 및 개발 서버)
+- **React Router** (페이지 라우팅)
+- **CSS Modules** (컴포넌트별 스타일 관리)
+- **Custom Web Fonts** (DungGeunMo, Press Start 2P, Nanum Gothic 등)
+
+## 설치 및 실행
+
+1. **프로젝트 생성 및 설치**  
+   터미널에서 아래 명령어를 실행하여 프로젝트를 생성하고 의존성을 설치합니다.
+   ```bash
+   npm create vite@latest initials-quiz-game -- --template react
+   cd initials-quiz-game
+   npm install
