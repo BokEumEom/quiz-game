@@ -1,0 +1,19 @@
+.header {
+  text-align: center;
+  padding: 20px 10px;
+  background: linear-gradient(135deg, #ffe0b2, #ffcc80);
+  color: #333333;
+}
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d84315;
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #6d4c41;
+}
