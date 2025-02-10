@@ -1,16 +1,11 @@
 /* src/pages/Quiz.module.css */
 
-/* Retro 픽셀 폰트와 한글 지원 대체 폰트를 함께 불러오기 */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-
 .container {
   background-color: #000000;
   color: #00ff00;
   min-height: 100vh;
   padding: 20px;
-  /* Press Start 2P가 한글을 지원하지 않으므로, Nanum Gothic을 대체 폰트로 지정 */
-  font-family: 'Press Start 2P', 'Nanum Gothic', sans-serif;
+  font-family: 'DungGeunMo', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +16,7 @@
   font-size: 2rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 0 #ff00ff;
+  font-family: 'DungGeunMo', sans-serif;
 }
 
 .quizCard {
@@ -52,7 +48,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.1s;
-  font-family: 'Press Start 2P', 'Nanum Gothic', sans-serif;
+  font-family: 'DungGeunMo', sans-serif;
 }
 
 .optionButton:hover {
@@ -67,9 +63,7 @@
   font-size: 1rem;
 }
 
-.result {
-  text-align: center;
-}
+/* 모달 관련 스타일은 ResultModal.module.css로 분리됨 */
 
 .homeButton {
   background-color: #ff00ff;
@@ -79,7 +73,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.1s;
-  font-family: 'Press Start 2P', 'Nanum Gothic', sans-serif;
+  font-family: 'DungGeunMo', sans-serif;
 }
 
 .homeButton:hover {

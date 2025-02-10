@@ -1,8 +1,9 @@
 // src/pages/Quiz.jsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { quizData } from '../data/quizData';
 import styles from './Quiz.module.css';
+import ResultModal from '../components/quiz/ResultModal';
 
 const Quiz = () => {
   const location = useLocation();
@@ -23,10 +24,10 @@ const Quiz = () => {
 
   const handleAnswer = (selected) => {
     if (selected === questions[currentIndex].answer) {
-      setScore(prev => prev + 1);
+      setScore((prev) => prev + 1);
     }
     if (currentIndex < questions.length - 1) {
-      setCurrentIndex(prev => prev + 1);
+      setCurrentIndex((prev) => prev + 1);
     } else {
       setShowResult(true);
     }
@@ -34,29 +35,34 @@ const Quiz = () => {
 
   if (!category) return null;
 
+  const handleCloseModal = () => {
+    navigate('/');
+  };
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{category.name} 퀴즈</h1>
-      {showResult ? (
-        <div className={styles.result}>
-          <p>퀴즈 종료!</p>
-          <p>점수: {score} / {questions.length}</p>
-          <button className={styles.homeButton} onClick={() => navigate('/')}>홈으로</button>
+      <div className={styles.quizCard}>
+        <p className={styles.question}>
+          {questions[currentIndex].question}
+        </p>
+        <div className={styles.options}>
+          {questions[currentIndex].options.map((option, idx) => (
+            <button
+              key={idx}
+              className={styles.optionButton}
+              onClick={() => handleAnswer(option)}
+            >
+              {option}
+            </button>
+          ))}
         </div>
-      ) : (
-        <div className={styles.quizCard}>
-          <p className={styles.question}>
-            {questions[currentIndex].question}
-          </p>
-          <div className={styles.options}>
-            {questions[currentIndex].options.map((option, idx) => (
-              <button key={idx} className={styles.optionButton} onClick={() => handleAnswer(option)}>
-                {option}
-              </button>
-            ))}
-          </div>
-          <p className={styles.progress}>문제 {currentIndex + 1} / {questions.length}</p>
-        </div>
+        <p className={styles.progress}>
+          문제 {currentIndex + 1} / {questions.length}
+        </p>
+      </div>
+      {showResult && (
+        <ResultModal score={score} total={questions.length} onClose={handleCloseModal} />
       )}
     </div>
   );

@@ -1,17 +1,23 @@
-/* Import the Nunito Sans font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+/* DungGeunMo 폰트 불러오기 */
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
-/* CSS Reset & Base Styles */
+/* CSS 리셋 및 기본 스타일 */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* 모든 텍스트에 DungGeunMo 폰트 적용 */
 body {
-  font-family: 'Nunito Sans', sans-serif; /* Global font applied */
-  background-color: #fffde7;  /* Very light, warm background (cream/yellow) */
-  color: #333333;           /* Dark text for readability */
+  font-family: 'DungGeunMo', sans-serif;
+  background-color: #fffde7;
+  color: #333333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

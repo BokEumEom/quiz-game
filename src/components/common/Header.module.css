@@ -1,19 +1,18 @@
+/* 개선된 Header 스타일 (src/components/common/Header.module.css) */
 .header {
   text-align: center;
-  padding: 20px 10px;
+  padding: 30px 20px; /* 패딩 증가로 여유 공간 확보 */
   background: linear-gradient(135deg, #ffe0b2, #ffcc80);
   color: #333333;
+  border-bottom: 4px solid #d84315; /* 강조된 하단 경계선 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 약간의 그림자 효과로 입체감 부여 */
 }
 
 .title {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;       /* 글자 크기 확대 */
   font-weight: bold;
   color: #d84315;
-}
-
-.description {
-  margin-top: 8px;
-  font-size: 1rem;
-  color: #6d4c41;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  /* 그림자 효과 추가 */
+  letter-spacing: 1px;      /* 약간의 글자 간격 추가 */
 }
