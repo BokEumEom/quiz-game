@@ -11,6 +11,8 @@ const categories = [
   { id: 2, name: '햄버거', image: '/images/hamburger.webp' },
   { id: 3, name: '라면', image: '/images/ramen.webp' },
   { id: 4, name: '아이스크림', image: '/images/icecream.webp' },
+  { id: 5, name: '피자', image: '/images/pizza.webp' },
+  { id: 6, name: '과자', image: '/images/snack.webp' },
 ];
 
 const Home = () => {
