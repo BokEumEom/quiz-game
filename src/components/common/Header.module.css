@@ -1,11 +1,10 @@
 /* 개선된 Header 스타일 (src/components/common/Header.module.css) */
 .header {
   text-align: center;
-  padding: 30px 20px; /* 패딩 증가로 여유 공간 확보 */
+  padding: 20px 20px; /* 패딩 증가로 여유 공간 확보 */
   background: linear-gradient(135deg, #ffe0b2, #ffcc80);
   color: #333333;
   border-bottom: 4px solid #d84315; /* 강조된 하단 경계선 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 약간의 그림자 효과로 입체감 부여 */
 }
 
 .title {
